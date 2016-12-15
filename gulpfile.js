@@ -4,13 +4,14 @@
   var clean = require('gulp-clean');
   var usemin = require('gulp-usemin');
 //HTML
-  //var htmlReplace = require('gulp-html-replace');
   var htmlmin = require('gulp-htmlmin');
   var htmlimport = require('gulp-html-import');
+  //var htmlReplace = require('gulp-html-replace');
 //CSS
   var cssmin = require('gulp-cssmin');
   var csslint = require('gulp-csslint');
   var autoprefixer = require('gulp-autoprefixer');
+  var sass = require('gulp-sass');
   //var less = require('gulp-less');
 //JS
   var uglify = require('gulp-uglify');
@@ -24,7 +25,7 @@
 /*Var's**********************************************************************/
 
 /*
-    VERIFICAR SASS e SERVER
+    VERIFICAR SASS(configurado) ver watch e SERVER
 */
 
 //Task padrão que limpa o diretório dist e executa as funções padrão
@@ -51,17 +52,20 @@ gulp.task('build-img', function() {
     .pipe(gulp.dest('dist/assets/img'));
 });
 
-gulp.task('import', function () {
-    gulp.src('./src/**/*.html')
-        .pipe(htmlimport('./src/'))
-        .pipe(gulp.dest('dist'));
-})
+
+gulp.task('sass', function () {
+  return gulp.src('./src/assets/scss/main.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer())
+    .pipe(cssmin())
+    .pipe(gulp.dest('./dist/assets/scss'));
+});
 
 //Task usemin que utiliza outras tasks do gulp
 gulp.task('usemin', function() {
   return gulp.src('src/**/*.html')
     .pipe(usemin({
-      html: [ function(){
+      html: [function(){
         return htmlimport('./src/');
       }, function(){
         return htmlmin({collapseWhitespace: true});
@@ -83,25 +87,34 @@ gulp.task('server', function() {
     gulp.watch('src/**/*').on('change', browserSync.reload);
 
     gulp.watch('src/assets/js/**/*.js').on('change', function(event) {
-        console.log("Linting " + event.path);
+        console.log("Linting javascript " + event.path);
         gulp.src(event.path)
             .pipe(jshint())
             .pipe(jshint.reporter(jshintStylish));
     });
 
     gulp.watch('src/assets/css/**/*.css').on('change', function(event) {
-        console.log("Linting " + event.path);
+        console.log("Linting css " + event.path);
         gulp.src(event.path)
             .pipe(csslint())
             .pipe(csslint.reporter());
     });
 
-    gulp.watch('src/assets/less/**/*.less').on('change', function(event) {
+    gulp.watch('src/assets/scss/**/*.scss').on('change', function(event) {
        var stream = gulp.src(event.path)
             .pipe(less().on('error', function(erro) {
-              console.log('LESS, erro compilação: ' + erro.filename);
+              console.log('SCSS, erro compilação: ' + erro.filename);
               console.log(erro.message);
             }))
-            .pipe(gulp.dest('src/css'));
+            .pipe(gulp.dest('src/assets/scss'));
     });
+
+    // gulp.watch('src/assets/less/**/*.less').on('change', function(event) {
+    //    var stream = gulp.src(event.path)
+    //         .pipe(less().on('error', function(erro) {
+    //           console.log('LESS, erro compilação: ' + erro.filename);
+    //           console.log(erro.message);
+    //         }))
+    //         .pipe(gulp.dest('src/css'));
+    // });
 });
