@@ -52,8 +52,8 @@ gulp.task('build-img', function() {
     .pipe(gulp.dest('dist/assets/img'));
 });
 
-
-gulp.task('sass', function () {
+//Sass
+gulp.task('sass', function() {
   return gulp.src('./src/assets/scss/main.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())

@@ -11,7 +11,7 @@ header {
   position: relative;
 }
 .sacola {
-  background: url(../assets/img/sacola.png) no-repeat top right;
+  background: url(../img/sacola.png) no-repeat top right;
   font-size: 14px;
   padding-right: 35px;
   text-align: right;
@@ -115,7 +115,7 @@ header {
 }
 /* ex6 */
 footer {
-  background-image: url(../assets/img/fundo-rodape.png);
+  background-image: url(../img/fundo-rodape.png);
   clear: both;
   padding: 20px 0;
 }
@@ -141,13 +141,13 @@ footer .container {
   text-indent: -9999px;
 }
 .social a[href*="facebook.com"] {
-  background-image: url(../assets/img/facebook.png);
+  background-image: url(../img/facebook.png);
 }
 .social a[href*="twitter.com"] {
-  background-image: url(../assets/img/twitter.png);
+  background-image: url(../img/twitter.png);
 }
 .social a[href*="plus.google.com"] {
-  background-image: url(../assets/img/googleplus.png);
+  background-image: url(../img/googleplus.png);
 }
 .menu-opcoes a:hover {
   color: #007dc6;
