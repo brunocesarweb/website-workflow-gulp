@@ -16,7 +16,9 @@
     "gulp-concat": "^2.6.0",
     "gulp-csslint": "^0.2.0",
     "gulp-cssmin": "^0.1.7",
+    "gulp-html-import": "0.0.2",
     "gulp-html-replace": "^1.5.4",
+    "gulp-htmlmin": "3.0.0",
     "gulp-imagemin": "^2.3.0",
     "gulp-jshint": "^1.11.2",
     "gulp-less": "^3.0.3",
@@ -24,5 +26,13 @@
     "gulp-usemin": "^0.3.14",
     "jshint-stylish": "^2.0.1"
   },
-  "description": ""
+  "description": "A workflow applied a website shop to work with Gulp.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunocesarweb/website-workflow-gulp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/brunocesarweb/website-workflow-gulp/issues"
+  },
+  "homepage": "https://github.com/brunocesarweb/website-workflow-gulp#readme"
 }

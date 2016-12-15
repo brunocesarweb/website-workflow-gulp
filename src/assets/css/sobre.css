@@ -3,7 +3,7 @@ body {
   font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-serif;
 }
 h1 {
-  background-image: url(../img/sobre-background.jpg);
+  background-image: url(../assets/img/sobre-background.jpg);
   padding: 10px;
 }
 figure {
