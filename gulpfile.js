@@ -24,13 +24,9 @@
   var browserSync = require('browser-sync').create();
 /*Var's**********************************************************************/
 
-/*
-    VERIFICAR SASS(configurado) ver watch e SERVER
-*/
-
 //Task padrão que limpa o diretório dist e executa as funções padrão
 gulp.task('default',['clean'], function() {
-	gulp.start('usemin','build-img');
+	gulp.start('usemin','build-img','sass');
 });
 
 //Task de copy e clean
@@ -52,8 +48,8 @@ gulp.task('build-img', function() {
     .pipe(gulp.dest('dist/assets/img'));
 });
 
-
-gulp.task('sass', function () {
+//Sass
+gulp.task('sass', function() {
   return gulp.src('./src/assets/scss/main.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
