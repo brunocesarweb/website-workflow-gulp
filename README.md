@@ -7,26 +7,26 @@ Esse é um workflow de trabalho utilizando o gulp e plugins para melhorar o dese
 
 Os plugins utilizados são:  
 
-##Para html:  
+####Para html:  
   -gulp-htmlmin(Minificação do html);  
   -gulp-html-import(É possível usar includes no html).  
 
-##Para CSS:  
+####Para CSS:  
   -gulp-cssmin(Minifica o css);  
   -gulp-csslint(Log de erros do css);  
   -gulp-autoprefixer(Adiciona prefixo no css);  
   -gulp-sass(Plugin para ler o sass).  
 
-##Para js:  
+####Para js:  
   -gulp-uglify(Minifica o javascript);  
   -gulp-jshint(Log de erros do javascript);  
   -jshint-stylish(Organiza a visualização do jshint).  
 
-##Para server:  
+####Para server:  
   -browser-sync(Sobe um servidor com o site).  
 
-##Para imagens:  
+####Para imagens:  
   -gulp-imagemin(Otimiza as imagens).  
 
-##Usemin:  
+####Usemin:  
   -gulp-usemin(Agrega várias funções do gulp).  
