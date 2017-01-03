@@ -44,7 +44,7 @@
 	.painel img {
 		width: 100%;
 	}
-
+}
 	@media (min-width: 480px) {
 		header h1 {
 			margin: 5px 0;
@@ -61,7 +61,7 @@
 
 	@media (min-width: 700px) {
 		.menu-opcoes {
-			position: absolute;
+			/*position: absolute;*/
 		}
 		.painel li {
 			width: 15%;
@@ -79,4 +79,3 @@
 			width: 69%;
 		}
 	}
-}
