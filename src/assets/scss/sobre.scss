@@ -1,79 +1,80 @@
-body {
+body#sobre {
   color: #333333;
   font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-serif;
 }
-h1 {
-  background-image: url(../assets/img/sobre-background.jpg);
+body#sobre h1 {
+  background-image: url(../img/sobre-background.jpg);
   padding: 10px;
 }
-figure {
+body#sobre figure {
   background: #F2EDED;
   border: 1px solid #ccc;
   text-align: center;
 }
-figcaption {
+body#sobre figcaption {
   font-style: italic;
 }
-h2 {
+body#sobre h2 {
   border-bottom: 2px solid #333333;
   margin-top: 2em;
 }
 
-body {
+body#sobre {
   margin-left: auto;
   margin-right: auto;
   width: 940px;
 }
-h3 {
+
+body#sobre h3 {
   background: #dcdcf5;
   font-size: 48px;
   text-align: center;
   padding: 20px;
   margin: 40px 0;
 }
-p {
+body#sobre p {
   padding: 0 3em;
   text-indent: 1em;
 }
-figure {
+body#sobre figure {
   padding: 1em;
   margin: 2em;
 }
-figcaption {
+body#sobre figcaption {
   margin-top: 0.5em;
 }
 /* exercicio 3: ID e seletor de filho */
-h3 a {
+body#sobre h3 a {
   color: #337;
   text-decoration: none;
 }
-.centro-distribuicao {
+body#sobre .centro-distribuicao {
   margin-left: auto;
   margin-right: auto;
   width: 550px;
 }
-.rodape {
+body#sobre .rodape {
   color: #777;
   margin: 2em 0;
   padding: 2em 0;
 }
-.rodape img {
+body#sobre .rodape img {
   margin-right: 2em;
   vertical-align: middle;
   width: 10%;
 }
 
-.familia-pelho {
+body#sobre .familia-pelho {
   float: right;
   margin: 0 0 1em 2em;
 }
 
-p:first-letter {
+body#sobre p:first-letter {
   font-weight: bold;
 }
-h1 + p {
+body#sobre h1 + p {
   text-indent: 0;
 }
-:not(p) + p:first-line {
+body#sobre :not(p) + p:first-line {
   font-variant: small-caps;
 }

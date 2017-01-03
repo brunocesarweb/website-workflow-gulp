@@ -11,7 +11,7 @@ header {
   position: relative;
 }
 .sacola {
-  background: url(../assets/img/sacola.png) no-repeat top right;
+  background: url(../img/sacola.png) no-repeat top right;
   font-size: 14px;
   padding-right: 35px;
   text-align: right;
@@ -22,9 +22,10 @@ header {
   right: 0;
 }
 .menu-opcoes {
-  position: absolute;
+  /*position: absolute;*/
   bottom: 0;
   right: 0;
+  text-align: right;
 }
 .menu-opcoes ul {
   font-size: 15px;
@@ -48,6 +49,9 @@ header {
 .busca form,
 .menu-departamentos h2 {
   margin: 10px;
+}
+.menu-departamentos h2 {
+  font-size: 1.5em;
 }
 .menu-departamentos ul li {
   background-color: white;
@@ -92,13 +96,24 @@ header {
 .novidades {
   background-color: #f5dcdc;
 }
+
+.novidades ol{
+  text-align: center;
+}
 .mais-vendidos {
   background: #dcdcf5;
+}
+
+.mais-vendidos ol{
+  text-align: center;
 }
 .painel {
   margin-bottom: 10px;
   padding: 10px;
-  width: 445px;
+/*  width: 445px;*/
+}
+.painel img {
+    width: 100%;
 }
 .novidades {
   float: left;
@@ -110,12 +125,12 @@ header {
   display: inline-block;
   vertical-align: top;
   width: 140px;
-  margin: 2px;
+  margin: 2px 0.9em 2px 0.9em;
   padding-bottom: 10px;
 }
 /* ex6 */
 footer {
-  background-image: url(../assets/img/fundo-rodape.png);
+  background-image: url(../img/fundo-rodape.png);
   clear: both;
   padding: 20px 0;
 }
@@ -141,13 +156,13 @@ footer .container {
   text-indent: -9999px;
 }
 .social a[href*="facebook.com"] {
-  background-image: url(../assets/img/facebook.png);
+  background-image: url(../img/facebook.png);
 }
 .social a[href*="twitter.com"] {
-  background-image: url(../assets/img/twitter.png);
+  background-image: url(../img/twitter.png);
 }
 .social a[href*="plus.google.com"] {
-  background-image: url(../assets/img/googleplus.png);
+  background-image: url(../img/googleplus.png);
 }
 .menu-opcoes a:hover {
   color: #007dc6;
